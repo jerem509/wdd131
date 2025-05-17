@@ -75,7 +75,7 @@ nav {
     color: var(--primary-color);
     text-decoration: none;
 }
-.nav-links:hover {
+nav > a:hover {
     text-decoration: underline;
     /* color: #f5f773; */
     font-size: 1.4rem;
