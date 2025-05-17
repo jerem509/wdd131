@@ -1,4 +1,4 @@
-* {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,7 +22,6 @@ nav {
 }
 
 .nav-links {
-    list-style-type: none;
     text-decoration: none;
     color: white;
 }
