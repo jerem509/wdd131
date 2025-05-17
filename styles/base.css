@@ -12,7 +12,7 @@ html, body {
     --primary-color: white;
     --davys-gray: #5D5B59ff;
     --jet: #333333;
-    --french-gray: #C2CDE0ff;
+    --lemon-yellow: #f2f637;
     --black: #000000ff;
     --indigo-dye: #1D4D72;
     --headings-font-family: "Lato", sans-serif;
@@ -74,6 +74,12 @@ nav {
     font-size: 1.3rem;
     color: var(--primary-color);
     text-decoration: none;
+}
+.nav-links:hover {
+    text-decoration: underline;
+    /* color: #f5f773; */
+    font-size: 1.4rem;
+    transition:60ms;
 }
 
 /* Body formatting */
@@ -181,7 +187,7 @@ footer > p {
     padding: 0;
 }
 #last-modified {
-    color: #f2f637;
+    color: var(--lemon-yellow);
     font-size: .7rem;
     font-weight: 450;
  }
