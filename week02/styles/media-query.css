@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+:root {
+    --blue-color: rgb(170, 187, 238);
+    --black-color: black;
+}
+
+/* Typography formatting */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* General styling of the body children */
+header, 
+main, 
+footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px solid rgb(155, 156, 156);
+    padding: 2rem .5rem;
+    background-color: rgb(170, 187, 238);
+}
+
+main {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 100%;
+}
+
+section {
+    padding: 1rem;
+    background-color: white;;
+}
