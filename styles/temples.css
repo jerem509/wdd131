@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family-general: 'Roboto', sans-serif;
+    --font-family-headings: 'Open Sans', 'Lato', sans-serif;
+}
+
+/* Everything Typography */
+#page-title {
+    font-family: var(--font-family-headings);
+    font-size: 2.1rem;
+    font-weight: 500;
+}
+#navbar a {
+    font-family: var(--font-family-headings);
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+}
+figcaption {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ====================================================================================
+   Navigation Bar Styling
+   ------------------------------------------------------------------------------------
+   This section contains all formatting rules related to the navigation bar, including:
+     - Layout and positioning   - Font styles and text alignment
+     - Background and borders   - Hover and active states
+     - Responsiveness and media queries
+   ==================================================================================== */
+   
+   #page-title {
+    color: white;
+    padding: .5rem;
+    background-color: #3c0a64;
+    border-top: 3px solid black;
+   }
+   #menu{
+    margin-right: .5rem; 
+    margin-top: .5rem;
+    background: none;
+    border: 0;
+    color: black;
+    position: relative;
+    float: right;
+    clear: both;
+   }
+
+   #menu::before {
+    content: "☰";
+    font-size: 2rem;
+    color: white;
+   }
+
+   #menu.open::before {
+    content: "❌";
+    font-size: 1.5rem;
+   }
+
+   #navbar {
+    background-color: #3c0a64;
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 1 auto;
+   }
+   #navbar.open {
+    display: flex;
+   }
+
+   #navbar li {
+    border: 1px solid rgba(115, 17, 206, 0.164);
+    padding: .2rem;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+   }
+
+   #navbar li:hover {
+       border: 1px solid rgb(144, 61, 221);
+    }
+
+   #navbar a {
+    display: block;
+   }
+
+/* =================================================================================
+    Album Body parts styling
+------------------------------------------------------------------------------------
+        This section contains all formatting rules related to the body of the album.
+================================================================================= */
+body {
+    height: 100vh;
+}
+
+header, main, footer {
+    background-color: rgb(214, 247, 236);
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+#album-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+h2 {
+    height: 2rem;
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+#album {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding: .5rem;
+}
+
+
+/* =================================================================================
+    Footer styling
+------------------------------------------------------------------------------------
+        This section contains all formatting rules related to the footer of the album.
+================================================================================= */
+footer {
+    flex: 1;
+    background-color: #3c0a64;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.7rem;
+}
+
+footer>p {
+    color: var(--primary-color);
+    margin-top: .3rem;
+    padding: 0;
+}
+
+#last-modified {
+    color: var(--lemon-yellow);
+    font-size: .7rem;
+    font-weight: 450;
+}
+
+
+
