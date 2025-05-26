@@ -22,12 +22,6 @@ listItems.forEach(item => {
     });
 });
 
-//make the menu button disappear beyond a size of 430px
-const menuButton = document.querySelector('#menu');
-window.addEventListener('resize', () => {
-    if ((window.innerWidth >= 431) && menuButton) {menuButton.remove();}
-});
-
 //Display the current year in the footer
 const currentYear = document.getElementById("current-year");
 const lastYearModified = document.querySelector("#last-modified");
