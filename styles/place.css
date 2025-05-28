@@ -1,0 +1,131 @@
+/* ====================================================================
+General formatting and variables
+======================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+*::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --isabelline: #F6F0E9ff;
+    --taupe: #48372Aff;
+    --honeydew: #ffffff;
+    --dartmouth-green: #186D46ff;
+    --cardinal: #a80000;
+    --headings-font-family1: "Lato", sans-serif;
+    --headings-font-family2: "Open Sans", sans-serif;
+    --general-font-family: "Roboto", sans-serif;
+    --general-font-size: 1rem;
+    --headings-font-size: 1.3rem;
+}
+/* =======================================================================
+Header parts styling 
+==========================================================================*/
+h1 {
+    font-family: var(--headings-font-family1);
+    font-weight: 600;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background-color: var(--cardinal);
+    color: var(--honeydew);
+}
+
+/* =========================================================================
+Main parts styling 
+============================================================================*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.7rem;
+}
+.green-row {
+    height: 1rem;
+    width: auto;
+    background-color: var(--dartmouth-green);
+}
+/* .hero::before {
+    content:"";
+    display: block;
+    height: 1rem;
+    background-color: var(--dartmouth-green);
+} */
+
+picture>img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 3px solid var(--cardinal);
+    border-top: 15px solid var(--dartmouth-green);
+}
+
+section:nth-child(3) {
+    margin-top: 2rem;
+}
+
+.weather-icon {
+    place-self: center;
+    margin-bottom: 1.5rem;
+}
+
+.weather-icon img {
+    width: 64px;
+}
+/* table headings styling */
+h2 {
+    font-family: var(--headings-font-family1);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+th, td {
+    font-family: var(--general-font-family);
+}
+
+/* table styling */
+th {
+    text-align: right;
+    padding-right: .5rem;
+}
+td {
+    text-align: left;
+    padding-left: .5rem;
+}
+
+/*==========================================================================
+ footer code part
+ ========================================================================== */
+footer {
+    flex: 1;
+    background-color: var(--cardinal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.7rem;
+}
+
+footer>p {
+    color: var(--honeydew);
+    margin-top: .3rem;
+    padding: 0;
+}
+
+#last-modified {
+    color: var(--honeydew);
+    font-size: .7rem;
+    font-weight: 450;
+}

@@ -1,0 +1,62 @@
+@media screen and (min-width: 500px) {
+    .weather-icon {
+        display: none;
+    }
+
+    main {
+        position: relative;
+        margin-bottom: 0;
+    }
+    
+
+    h2 {
+        text-align: left;
+        padding: 0.3rem 1rem 0.3rem;
+        background-color: var(--dartmouth-green);
+        color: white;
+        position: relative;
+        left: -1.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    section:nth-child(3) h2::after {
+        content: "🌥️";
+        margin-left: 1rem;
+    }
+
+    section {
+        position: absolute;
+        border: 1px solid grey;
+        background-color: rgba(211, 211, 211, 0.753);
+        padding: .7rem;
+        transform: scale(.6);
+    }
+
+    section:nth-child(2) {
+        top: 30px;
+        left: 30px;
+        transform-origin: top left;
+    }
+
+    section:nth-child(3) {
+        bottom: 30px;
+        right: 10px;
+        transform-origin: bottom right;
+    }
+
+}
+
+/* @media screen and (min-width: 700px) {
+    section {
+        transform: scale(.8);
+        transition: transform 0.5s ease-in-out;
+    }
+} */
+
+@media screen and (min-width: 1000px) {
+    section {
+        transform: scale(1);
+        transition: transform 0.5s ease-in-out;
+    }
+}

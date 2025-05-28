@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="author" content="Charles Jonel">
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Country page - Haiti: apply the principles of responsive images and notions of javascripts while building a webpage about a country.">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-queries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Haiti</h1>
+    </header>
+    <main>
+        <div id="hero-container">
+            <picture class="hero">
+                <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="Picture of the temple of Port-au-Prince Haiti">
+            </picture>
+        </div>
+
+
+        <section>
+            <h2>Data</h2>
+            <table>
+                <tr>
+                    <th>Area:</th>
+                    <td>27 700 sq km</td>
+                </tr>
+                <tr>
+                    <th>Population:</th>
+                    <td>12000000</td>
+                </tr>
+                <tr>
+                    <th>Capital:</th>
+                    <td>Port-au-Prince</td>
+                </tr>
+                <tr>
+                    <th>Languages:</th>
+                    <td>Creole, French</td>
+                </tr>
+                <tr>
+                    <th>Currency:</th>
+                    <td>Gourde</td>
+                </tr>
+                <tr>
+                    <th>Timezone:</th>
+                    <td>UTC-4</td>
+                </tr>
+                <tr>
+                    <th>Calling code:</th>
+                    <td>+509</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2>Weather</h2>
+            <div class="weather-icon"><img src="images/weather_cloud_forecast_icon.svg" alt="weather icon"></div>
+            <table>
+                <tr>
+                    <th>Temperature:</th>
+                    <td class="temp-amb">10</td>
+                </tr>
+                <tr>
+                    <th>Conditions:</th>
+                    <td>Cloudy</td>
+                </tr>
+                <tr>
+                    <th>Winds:</th>
+                    <td id="wind-speed">10</td>
+                </tr>
+                <tr>
+                    <th>Wind Chill:</th>
+                    <td class="chill-temp"></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="current-year"></span> 🌴 Charles Jonel 🌴 Haiti</p>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+</html>
