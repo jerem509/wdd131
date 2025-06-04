@@ -1,0 +1,45 @@
+@media screen and (min-width: 800px) {
+    header,
+    main,
+    footer {
+        max-width: 1500px;
+        margin: 0 auto;   
+    }
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #3c0a64;
+    }
+    nav {
+        width: 60%;
+        padding-right: .5rem;
+        display: flex;
+        place-content: center;
+    }
+    #navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex: 1 1 auto;
+    }
+
+    #navbar li {
+        border: 0;
+    }
+
+    #page-title, li {
+        background: none;
+        border-top: 0;
+        margin-left: 0.5rem;
+    }
+    #album {
+        display: grid;
+        grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    #menu {
+        display: none;
+    }
+}

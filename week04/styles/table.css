@@ -1,0 +1,38 @@
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    caption-side: bottom;
+}
+
+th,
+td {
+
+    padding: 0.8rem;
+}
+
+td {
+    text-align: center;
+}
+
+
+
+thead th:first-child {
+    background-color: black;
+    color: white;
+}
+
+caption {
+    font-style: italic;
+    padding: .6rem;
+}
+
+thead tr:nth-child(2) {
+    background-color: gray;
+}
+
+
