@@ -39,7 +39,7 @@
     }
 
     #navbar a {
-        background-color: none;
+        background-color: var(--accent-color2);
         min-width: 100px;
     }
 
