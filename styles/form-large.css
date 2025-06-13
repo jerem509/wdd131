@@ -1,0 +1,29 @@
+@media screen and (min-width: 800px) {
+    body {
+        width: 800px;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    select {
+        width: 430px;
+    }
+
+    #radio-btns {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        gap: 30px;
+        justify-content: left;
+    }
+
+    input[type="submit"] {
+        width: 380px;
+        padding: .2rem 3rem;
+        margin-left: 25px;
+    }
+}

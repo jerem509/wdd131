@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD131 - Charles Jonel - Form</title>
+    <meta name="author" content="Charles Jonel">
+    <meta name="description" content="WDD131 - Charles Jonel - Learning to build a form using html, css and javascript.">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <!-- <header>
+        <h1>WDD131 - Charles Jonel - Form</h1>
+        <nav id="navbar">
+            <ul id="nav-list">
+                <a href="#" target="_self"><li>Home</li></a>
+                <a href="#" target="_self"><li>About</li></a>
+                <a href="#" target="_self"><li>Contact</li></a>
+            </ul>
+        </nav>
+    </header> -->
+
+    <main>
+        <h1>Product Review</h1>
+        <form method="get" action="review.html">
+            <p>(<span class="red-star">*</span> : indicates required fields.)</p>
+            
+            <label for="products-list">
+                Product Name<span class="red-star">*</span>
+                <select name="prod-name" id="products-list">
+                    <option value="default" selected disabled>Select a product ... </option>
+                </select>
+            </label>
+            <fieldset id="radio-ratings">
+                <div class="hdn">Overall rating<span class="red-star">*</span></div>
+                <div id="radio-btns">
+                    <label>
+                        ★
+                        <input type="radio" name="rating" value="1" required>
+                    </label>
+                    <label>
+                        ★★
+                        <input type="radio" name="rating" value="2" required>
+                    </label>
+                    <label>
+                        ★★★
+                        <input type="radio" name="rating" value="3" required>
+                    </label>
+                    <label>
+                        ★★★★
+                        <input type="radio" name="rating" value="4" required>
+                    </label>
+                    <label>
+                        ★★★★★
+                        <input type="radio" name="rating" value="5" required>
+                    </label>
+                </div>
+            </fieldset>
+            
+            <label>
+                Date of installation<span class="red-star">*</span>
+                <input type="date" id="date" required>
+            </label>
+            
+            <fieldset id="chkbox">
+                <div class="hdn">Which features did you find useful in the product?<span class="red-star">*</span>
+                <span id="chk-span">(Check all that apply)</span></div>
+                <label>
+                    <input type="checkbox" id="durability" value="durability"> Durability
+                </label>
+                <label>
+                    <input type="checkbox" id="ease-of-use" value="ease-of-use"> Ease of Use
+                </label>
+                <label>
+                    <input type="checkbox" id="peformance" value="peformance"> Performance
+                </label>
+                <label>
+                    <input type="checkbox" id="design" value="design"> Design
+                </label>
+            </fieldset>
+           
+            <label>
+                Written Review <span>(Optional)</span>
+                <textarea id="review-area" name="area" rows="5"></textarea>
+            </label>
+        
+            <label>
+                Your Name <span>(Optional)</span>
+                <input id="user-name" type="text" name="user-name" placeholder="John Daphitz">
+            </label>
+            <div>
+                <input type="submit" value="Post Review">
+            </div>
+
+            <p id="visits">
+                Number of visits: <span></span>
+            </p>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> 🌴 Charles Jonel 🌴 Haiti</p>
+        <p id="last-modified"></p>
+    </footer>
+    
+</body>
+</html>
