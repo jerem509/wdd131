@@ -5,7 +5,7 @@
 }
 
 body {
-    max-width: 800px;
+    max-width: 767px;
     margin: 0 auto;
     color: var(--secondary-color);
 }
@@ -20,6 +20,7 @@ body {
     --accent-color1: #d3d3d3;
     --accent-color2: #2C5784; 
     --accent-color3: #FCA311;
+    --bg-color-lst: #06063d;
     --font-family-headings: 'Playfair Display', sans-serif;
     --font-family-buttons: 'Lato', sans-serif;
     --font-family-general-text: 'Roboto', sans-serif;
@@ -30,11 +31,17 @@ h1, h2 {
     font-family: var(--font-family-headings);
 }
 
-h2 {
-    font-size: 1.2rem;
+h1 {
+    font-size: 1rem;
+    color: var(--primary-color);
 }
 
-section p, section li {
+h2 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+section li {
     font-family: var(--font-family-general-text);
     font-size: 1rem;
     line-height: 24px;
@@ -54,18 +61,27 @@ section p, section li {
     font-size: 1.2rem;
     font-weight: 500;
 }
-#btn {
+.btn {
     font-family: var(--font-family-buttons);
     font-size: 1.2rem;
     font-weight: 500;
 }
 
+main p {
+    text-indent: 1%;
+    text-align: justify;
+    font-family: var(--font-family-general-text);
+    line-height: 24px;
+    font-size: clamp(12px, 1rem, 1.1rem);
+}
+
+
 /*-----------------------HEADER------------------------*/
 header {
     display: grid;
-    grid-template-columns: 1fr 1fr 40px;
+    grid-template-columns: .4fr 1fr 40px;
     grid-template-rows: auto 1fr;
-    background-color: var(--accent-color1);
+    background-color: var(--bg-color-lst);
 }
 #logo-container {
     display: block;
@@ -81,17 +97,18 @@ header img {
 }
 h1 {
     place-self: center;
-    font-size: 1.4rem;
     grid-column: 2/3;
     grid-row: 1/2;
 }
 #navbar {
+    background-color: #06063da6;
     display: none;
     grid-column: 1/4;
     grid-row: 2/3;
 }
 #navbar.open {
     display: flex;
+
 }
 nav ul {
     display: flex;
@@ -114,7 +131,7 @@ nav ul {
     padding: .4rem 0;
     width: 100%;
     text-align: center;
-    background-color: var(--accent-color2);
+    /* background-color: var(--accent-color2); */
 }
 
 #menuBtn {
@@ -123,7 +140,7 @@ nav ul {
 #menuBtn::before {
     content: "☰";
     font-size: 2rem;
-    color: var(--accent-color2);
+    color: var(--primary-color);
 }
 
 #menuBtn.open::before {
@@ -135,37 +152,96 @@ nav ul {
 
 /*-----------------------BODY------------------------*/
 
-main {
-    background-color: var(--primary-color);
-    width: 95%;
-    margin: 1rem auto 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+/*Banner*/
+#hero-banner {
+    position: relative;
+    margin-bottom: 1rem;
 }
 
-section ul {
-    padding: 0 1rem;
-}
-
-section h2 {
-    margin-bottom: .5rem;
-}
-section img {
+#hero {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-#pic-wireframe {
-    width: 300px;
+.main-elt-container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+#hero-banner button {
+    min-width: 100px;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--accent-color3);
+    padding: .5rem 1.3rem;
+    border-radius: 7px;
+    border: 1px solid var(--accent-color3);
+    transform: scale(.7);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: black;
+}
+
+#hero-banner button:hover {
+    cursor: pointer;
+}
+
+#hero-banner .atitle {
+    position: absolute;
+    bottom: 1rem;
+    left: 3%;
+    text-align: left;
+    font-size: clamp(1.3rem, 5vw, 2.3rem);
+    font-weight: 600;
+    color: white; 
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+section img, section figure img, #kanaval {
+    width: 100%;
     height: auto;
+    object-fit: cover;
+    display: block;
+    margin-bottom: .5rem;
+    margin-top: .7rem;
+    box-shadow: 2px 4px 10px 2px grey;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+#k-culture {
+    margin: 1rem .3rem;
+}
+
+#kanaval-text {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#kanaval-text p {
+    text-align: center;
 }
 
 /*-----------------------FOOTER------------------------*/
 footer {
-    flex: 1;
-    background-color: var(--accent-color1);
+    background-color: var(--bg-color-lst);
     color: white;
     display: flex;
     flex-direction: column;
@@ -174,13 +250,121 @@ footer {
 }
 
 footer>p {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-top: .3rem;
     padding: 0;
 }
 
 #last-modified {
-    color: var(--secondary-color);
+    color: #dcdf2a;
     font-size: .7rem;
     font-weight: 450;
+}
+
+
+
+/* ==============================CONTACT US PAGE STYLING=========================== */
+#form-structure{
+    margin: 0 auto;
+    padding: 1rem .3rem;
+    max-width: 600px;
+}
+
+#user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+fieldset {
+    border: 0px;
+}
+
+textarea,
+input[type="text"],
+input[type="email"]
+{
+    display: block;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid grey;
+}
+
+
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus 
+{
+    outline: none;
+    border: 2px solid var(--accent-color2);
+}
+
+#adress-section {
+    margin-top: 3rem;
+}
+
+#user-form button {
+    padding: .4rem;
+    width: 80%;
+    background-color: var(--accent-color3);
+    font-weight: 550;
+    border: 0;
+    border-radius: 7px;
+    margin: 0 10%;
+}
+
+/* ==============================ABOUT PAGE=========================== */
+html,
+body {
+    height: 100%;
+    margin: 0; 
+}
+
+#about-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1rem .5rem;
+}
+
+/* #author-intro, #country-section {
+    position: relative;
+} */
+
+
+#country-section img {
+    margin: 0 1rem .3rem 0;
+    max-width: 40%;
+    float: left;
+}
+
+#author-intro img {
+    margin: 0 1rem .3rem 0;
+    max-width: 30%;
+    float: left;
+}
+
+/* ==============================SITEPLAN=========================== */
+#siteplan {
+    max-width: 600px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }

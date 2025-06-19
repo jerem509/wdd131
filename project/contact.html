@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <meta name="description" content="This page contains a form to fill to contact the owner of the website.">
+    <meta name="author" content="Charles Jonel">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/siteplan-large.css">
+    <script src="scripts/siteplan.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="logo-container">
+            <img id="logo" src="images/logo8.svg" alt="PhotoPaulo logo">
+        </div>
+        <h1>Jeremyen - Nou Sonje</h1>
+        <div id="menuBtn"></div>
+        <nav id="navbar">
+            <ul>
+                <li class="navMenuItem"><a href="home.html">Home</a></li>
+                <li class="navMenuItem"><a href="about.html">About Us</a></li>
+                <li class="navMenuItem"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-elt-container">
+            <div id="form-structure">
+                <div class="p-container">
+                    <h2>Contact Us</h2>
+                    <p id="incitation-msg">
+                        We’d love to hear from you! Whether you have questions, feedback, or simply want to share your connection to Jérémie,
+                        don’t hesitate to reach out. Your stories, thoughts, and ideas help us enrich this gallery and celebrate the beauty,
+                        history, and culture of our beloved city together. Let’s keep the conversation going!
+                    </p>
+                </div>
+
+                <form method="get" action="review.html" id="user-form">
+                    <div class="usr-input">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" required>
+                    </div>
+                    <div class="usr-input">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <fieldset  class="usr-input">
+                        <legend>Purpose</legend>
+                        <div>
+                            <input type="radio" id="gnl-inquiry" name="purpose"  value="General Inquiry" required>
+                            <label for="gnl-inquiry" class="purpose-label">General Inquiry</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="reservation" name="purpose" value="Reservation Question" required>
+                            <label for="reservation" class="purpose-label">Reservation Question</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="web-suggestion" name="purpose" value="Website Suggestion" required>
+                            <label for="web-suggestion" class="purpose-label">Website Suggestion</label>
+                        </div>
+                    </fieldset>
+                    <div  class="usr-input">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="5" required></textarea>
+                    </div>
+                    <fieldset id="subscribe">
+                        <label for="news-subscription">
+                            Please subscribe to the monthly newsletter
+                        </label>
+                        <input type="checkbox" id="news-subscription">
+                    </fieldset> 
+                    <button type="submit" class="btn">Submit Message</button>
+                                
+                </form>
+
+                <div id="adress-section">
+                    <div id="adress">
+                        <h3>Haiti</h3>
+                        <div>#250, Source Dommage<br>
+                            Jeremie, Grand'Anse<br>
+                            Tel: +509 40000000<br>
+                            Email: <a href="mailto:inconnuuuu@gmail.com" target="_blank">inconnuuuu@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="adress-on-map">
+                        <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3780.2870343120376!2d-74.1207593!3d18.6511113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sht!4v1743829009063!5m2!1sen!2sht" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 🌴 Charles Jonel 🌴 Haiti</p>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+</html>
