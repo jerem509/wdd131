@@ -38,3 +38,21 @@ sections.forEach(section => {
 
 const homeBtn = document.querySelector('#home-button');
 homeBtn.addEventListener('click', () => window.location.href = 'contact.html');
+
+//=================NUMBER OF SUBMISSION==================================
+// const submitBtn = document.querySelector("#form-post-btn");
+// const confirmation = document.querySelector("#confirmation");
+// let numVisits = Number(window.localStorage.getItem("numOfVisits")) || 0;
+
+// submitBtn.addEventListener('click', (confirmation) => {
+//     if (numVisits === 0) {
+//         numVisits++;
+//         confirmation.textContent = `First message submitted 🥳.`;
+//     }
+//     else {
+//         numVisits++;
+//         confirmation.textContent = `Thank you for your message 🥳.`;
+//     }
+// })
+
+// localStorage.setItem("numOfVisits", numVisits);
